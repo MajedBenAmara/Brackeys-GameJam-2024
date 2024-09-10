@@ -1,11 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]
-    GameObject[] MenuScreen;
+    [SerializeField] GameObject[] MenuScreen;
+    [SerializeField] AudioMixer audioMixer;
 
 
     private void Start()
@@ -30,5 +32,24 @@ public class MainMenu : MonoBehaviour
                 item.SetActive(false);
             }
         }
+    }
+
+
+    public void SetVolume(Slider VolumeSlider)
+    {
+        float volume = VolumeSlider.value;
+        audioMixer.SetFloat(VolumeSlider.name, volume);
+    }
+
+
+    public void Redirect(string Link)
+    {
+        Application.OpenURL(Link);
+    }
+
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
