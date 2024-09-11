@@ -11,7 +11,7 @@ public class EnemiesCreator : MonoBehaviour
     private float _crationCD = 1;
     private float _creationTime;
     [SerializeField]
-    private Enemy[] _enemy;
+    private GameObject[] _enemy;
 
     EnemyToCreate[] _enemiesToCreate;
     private bool _startCreating = false;
@@ -20,57 +20,39 @@ public class EnemiesCreator : MonoBehaviour
     {
         Instance = this;
     }
-    // try making a SO that hase enemyType(string) and enemyNumber(int) and make a list of SO and just go through that list and start creating enemies
-    private void Update()
-    {
-        CreateEnemy();
-    }
-
-
 
     public void StartCreateProcess(EnemyToCreate[] enemies)
     {
         _enemiesToCreate = enemies;
         _startCreating = true;
     }
-    private void CreateEnemy()
+    public IEnumerator CreateEnemy()
     {
-        if (!_startCreating)
-            return;
-        foreach (EnemyToCreate e in _enemiesToCreate)
+        if (_startCreating)
         {
-            int length = e.EnemyNumber;
-            Enemy enemy = SearchForEnemy(e.EnemyType);
-            for (int i = 0; i < length; i++)
+            foreach (EnemyToCreate e in _enemiesToCreate)
             {
-                if (Time.time - _creationTime > _crationCD)
+                int length = e.EnemyNumber;
+                GameObject enemy = SearchForEnemy(e.EnemyType);
+                for (int i = 0; i < length; i++)
                 {
-                    _creationTime = Time.time;
                     Vector2 enemyPos = GetRandomCoor();
-                    Debug.Log("Pos = " + enemyPos);
                     Instantiate(enemy, enemyPos, Quaternion.identity);
-                    length--;
+                    yield return new WaitForSeconds(_crationCD);                   
                 }
             }
+            _startCreating = false;
         }
-        _startCreating = false;
 
-        /*        if (Time.time - _creationTime > _crationCD)
-                {
-                    _creationTime = Time.time;
-                    Vector2 enemyPos = GetRandomCoor();
-                    Debug.Log("Pos = " + enemyPos);
-                    Instantiate(_enemy, enemyPos, Quaternion.identity);
-                }*/
 
     }
 
-    private Enemy SearchForEnemy(string type)
+    private GameObject SearchForEnemy(string type)
     {
-        Enemy enemy = new Enemy();
-        foreach (Enemy e in _enemy)
+        GameObject enemy;
+        foreach (GameObject e in _enemy)
         {
-            if(e.EnemyName == type)
+            if(e.GetComponent<Enemy>().EnemyName == type)
             {
                 enemy = e;
                 return enemy;
