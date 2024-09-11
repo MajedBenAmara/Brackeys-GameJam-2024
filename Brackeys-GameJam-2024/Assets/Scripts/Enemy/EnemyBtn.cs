@@ -19,7 +19,6 @@ public class EnemyBtn : MonoBehaviour
             e.EnemyNumber = EnemiesNumber[i];
             _enemy[i]= e;
 
-            Debug.Log("enemy info = " + _enemy[i].EnemyType + " " + _enemy[i].EnemyNumber);
         }
 
 

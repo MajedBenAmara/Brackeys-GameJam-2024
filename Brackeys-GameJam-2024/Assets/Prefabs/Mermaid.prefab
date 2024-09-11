@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2636500535288693911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2589021914129960091}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2589021914129960091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2636500535288693911}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.16, y: 0.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 260306578214798372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5103622031457801982
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,10 +208,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9060326623186710746}
-  - component: {fileID: 2015822420412632861}
   - component: {fileID: 4191189389200701236}
+  - component: {fileID: 8814359723431432845}
   m_Layer: 0
-  m_Name: Enemy Green
+  m_Name: Mermaid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,24 +233,6 @@ Transform:
   - {fileID: 260306578214798372}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2015822420412632861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7634392206098250036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee814f4cb3a79e47a6d47701e9dce81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyName: green
-  _health: 10
-  _damage: 2
-  Speed: 2
-  _distanceromPlayer: 0.5
-  _model: {fileID: 260306578214798372}
 --- !u!61 &4191189389200701236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,6 +278,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8814359723431432845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7634392206098250036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc94a2e3756a8a42bf8bcf97c89ce8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyName: Mermaid
+  _health: 10
+  _damage: 1
+  Speed: 2
+  _distanceFromPlayer: 4.54
+  _model: {fileID: 260306578214798372}
+  _escapeDistance: 2.94
+  _firePoint: {fileID: 2589021914129960091}
+  _waves: {fileID: 3869927129238888251, guid: 15642cb1ea288c040b4da6c925c67f83, type: 3}
+  _fireRate: 1
 --- !u!1 &9187499468886931612
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2589021914129960091}
   - {fileID: 1400588350747771906}
   - {fileID: 177944926451866054}
   m_Father: {fileID: 9060326623186710746}

@@ -9,7 +9,6 @@ public class EnemiesCreator : MonoBehaviour
     private float _innerRing, _outerRing;
     [SerializeField]
     private float _crationCD = 1;
-    private float _creationTime;
     [SerializeField]
     private GameObject[] _enemy;
 

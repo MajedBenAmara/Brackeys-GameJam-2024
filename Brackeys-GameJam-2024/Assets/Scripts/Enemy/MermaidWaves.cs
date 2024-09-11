@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class CannonBall : Projectil
+public class MermaidWaves : Projectil
 {
+    [SerializeField]
+    private float _wavesDamage = 2f;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -12,7 +14,7 @@ public class CannonBall : Projectil
 
     private void OnEnable()
     {
-        _moveDirection = -PlayerManager.instance.PlayerCombat.FireDirection;
+        _moveDirection = PlayerManager.instance.playerGameObject.transform.position - transform.position;
         _instantiationTime = Time.time;
     }
 
@@ -28,6 +30,6 @@ public class CannonBall : Projectil
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        HitTarget(collision, "Enemy", PlayerManager.instance.PlayerStats.PlayerDamage);
+        HitTarget(collision, "Player", _wavesDamage);
     }
 }
