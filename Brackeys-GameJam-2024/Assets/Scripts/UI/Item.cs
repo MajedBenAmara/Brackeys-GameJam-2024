@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
 
     public string Name;
     [TextArea] public string Description;
+    public float Size;
     public Sprite Sprite;
     public int Price;
     public UnityEvent PowerUp;
@@ -15,24 +16,24 @@ public class Item : MonoBehaviour
     {
         PowerUp?.Invoke();  
     }
-    public void Heal()
+    public void Health()
     {
-        Debug.Log("+100 HP");
+        PlayerManager.instance.playerGameObject.GetComponent<PlayerStats>().AddHealth(Size, Price);
     }
 
-    public void damage()
+    public void MaxHealth()
     {
-        Debug.Log("hoo nooo!");
+        PlayerManager.instance.playerGameObject.GetComponent<PlayerStats>().AddMaxHealth(Size, Price);
     }
 
-    public void shipstreangth()
+    public void Firerate()
     {
-        Debug.Log("ship upgraded!!");
+        PlayerManager.instance.playerGameObject.GetComponent<PlayerStats>().changeFireRate(Size, Price);
     }
 
-    public void IDK()
+    public void FireRange()
     {
-        Debug.Log("IDK!!!!!!!");
+        PlayerManager.instance.playerGameObject.GetComponent<PlayerStats>().changeFireRange(Size, Price);
     }
 
 }
