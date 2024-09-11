@@ -556,15 +556,15 @@ PrefabInstance:
     - target: {fileID: 8396970011207818353, guid: 83ca43db79f2a9f4a8b50ea38c3781fa, type: 3}
       propertyPath: _enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 6457407524033592311, guid: 6afc7e22def44fc499a07f28c2df1bdd, type: 3}
+      objectReference: {fileID: 7634392206098250036, guid: a19948ad24e93af4ba85ea9ca72542f1, type: 3}
     - target: {fileID: 8396970011207818353, guid: 83ca43db79f2a9f4a8b50ea38c3781fa, type: 3}
       propertyPath: _enemy.Array.data[1]
       value: 
-      objectReference: {fileID: 7634392206098250036, guid: a19948ad24e93af4ba85ea9ca72542f1, type: 3}
+      objectReference: {fileID: 3855069382358271805, guid: 27fc67e4c29b7cb4ab0ac7ffa33d6353, type: 3}
     - target: {fileID: 8396970011207818353, guid: 83ca43db79f2a9f4a8b50ea38c3781fa, type: 3}
       propertyPath: _enemy.Array.data[2]
       value: 
-      objectReference: {fileID: 3855069382358271805, guid: 27fc67e4c29b7cb4ab0ac7ffa33d6353, type: 3}
+      objectReference: {fileID: 6457407524033592311, guid: 6afc7e22def44fc499a07f28c2df1bdd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -662,6 +662,18 @@ PrefabInstance:
     - target: {fileID: 743436831672506946, guid: 53d7188dc9d7fe24885a2ea5ed2145de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901461786168579288, guid: 53d7188dc9d7fe24885a2ea5ed2145de, type: 3}
+      propertyPath: EnemiesType.Array.data[0]
+      value: Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901461786168579288, guid: 53d7188dc9d7fe24885a2ea5ed2145de, type: 3}
+      propertyPath: EnemiesType.Array.data[1]
+      value: Mermaid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901461786168579288, guid: 53d7188dc9d7fe24885a2ea5ed2145de, type: 3}
+      propertyPath: EnemiesType.Array.data[2]
+      value: Merman
       objectReference: {fileID: 0}
     - target: {fileID: 2538328181150197821, guid: 53d7188dc9d7fe24885a2ea5ed2145de, type: 3}
       propertyPath: m_AnchorMax.y
