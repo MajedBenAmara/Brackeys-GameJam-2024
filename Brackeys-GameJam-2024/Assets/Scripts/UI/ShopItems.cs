@@ -34,4 +34,18 @@ public class ShopItems : MonoBehaviour
         Buy.onClick.AddListener(referance.Buy);
     }
 
+
+
+    //Need to changed to different script this is for testing
+    public Text CurGold;
+    
+    void updategold()
+    {
+        CurGold.text = $"Gold: {PlayerManager.instance.playerGameObject.GetComponent<PlayerStats>().Gold}";
+    }
+
+    private void Update()
+    {
+        updategold();
+    }
 }
