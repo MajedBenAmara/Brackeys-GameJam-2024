@@ -126,10 +126,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021914600578674845}
-  - component: {fileID: 7965698854431534466}
   - component: {fileID: 580202920845868287}
+  - component: {fileID: -5511059939003200228}
   m_Layer: 0
-  m_Name: Enemy Blue
+  m_Name: Shark
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,24 +151,6 @@ Transform:
   - {fileID: 4271375207924577293}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7965698854431534466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6457407524033592311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee814f4cb3a79e47a6d47701e9dce81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyName: blue
-  _health: 10
-  _damage: 2
-  Speed: 2
-  _distanceromPlayer: 0.5
-  _model: {fileID: 4271375207924577293}
 --- !u!61 &580202920845868287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -214,6 +196,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-5511059939003200228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457407524033592311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f52780db8306d429659459715a726a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyName: Shark
+  _health: 10
+  _damage: 2
+  Speed: 2
+  _distanceFromPlayer: 0.7
+  _model: {fileID: 4271375207924577293}
 --- !u!1 &7930225762694194366
 GameObject:
   m_ObjectHideFlags: 0

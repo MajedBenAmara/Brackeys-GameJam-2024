@@ -8,28 +8,21 @@ public class Enemy : MonoBehaviour
 {
     public string EnemyName;
     [SerializeField]
-    private float _health;
+    protected float _health;
     [SerializeField]
-    private float _damage;
+    protected float _damage;
     [SerializeField]
-    private float Speed;
+    protected float Speed;
     [SerializeField]
-    private float _distanceromPlayer = .7f;
+    protected float _distanceFromPlayer = .7f;
     [SerializeField]
-    private Transform _model;
+    protected Transform _model;
     internal bool EnemyIsDead = false;
 
-    void Update()
-    {
-        ChasePlayer();
-        FacePlayer();
-        ManageHealth();
-    }
 
-
-    public void ChasePlayer()
+    protected void ChasePlayer()
     {
-        if (Vector2.Distance(transform.position, PlayerManager.instance.playerGameObject.transform.position) > _distanceromPlayer)
+        if (Vector2.Distance(transform.position, PlayerManager.instance.playerGameObject.transform.position) > _distanceFromPlayer)
         {
             Vector2 directionToPlayer = PlayerManager.instance.playerGameObject.transform.position - transform.position;
             transform.Translate(directionToPlayer.normalized * Speed * Time.deltaTime);
@@ -81,8 +74,8 @@ public class Enemy : MonoBehaviour
 
     public void ReceiveDamage(float damage)
     {
-        Debug.Log("Enemy damaged");
         _health -= damage;
+        ManageHealth();
     }
 
     private void ManageHealth()
@@ -96,5 +89,11 @@ public class Enemy : MonoBehaviour
     private void Death()
     {
         Destroy(gameObject);
+    }
+
+    protected virtual void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, _distanceFromPlayer);
     }
 }
