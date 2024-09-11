@@ -18,9 +18,12 @@ public class EnemyBtn : MonoBehaviour
             e.EnemyType = EnemiesType[i];
             e.EnemyNumber = EnemiesNumber[i];
             _enemy[i]= e;
+
+            Debug.Log("enemy info = " + _enemy[i].EnemyType + " " + _enemy[i].EnemyNumber);
         }
 
 
         EnemiesCreator.Instance.StartCreateProcess(_enemy);
+        EnemiesCreator.Instance.StartCoroutine(EnemiesCreator.Instance.CreateEnemy());
     }
 }
