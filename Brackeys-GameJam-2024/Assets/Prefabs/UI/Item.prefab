@@ -215,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Health potion
   Description: Add Health
+  Size: 1
   Sprite: {fileID: 21300000, guid: ba345f2f643d842459447c374943401d, type: 3}
   Price: 100
   PowerUp:
@@ -222,7 +223,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4759552639187556406}
         m_TargetAssemblyTypeName: Item, Assembly-CSharp
-        m_MethodName: Heal
+        m_MethodName: Health
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
