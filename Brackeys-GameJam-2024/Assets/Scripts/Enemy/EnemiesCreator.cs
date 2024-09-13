@@ -15,6 +15,7 @@ public class EnemiesCreator : MonoBehaviour
     EnemyToCreate[] _enemiesToCreate;
     private bool _startCreating = false;
     public static EnemiesCreator Instance;
+
     private void Awake()
     {
         Instance = this;
@@ -59,6 +60,7 @@ public class EnemiesCreator : MonoBehaviour
         }
         return null;
     }
+
     private Vector2 GetRandomCoor()
     {
         float posX = Random.Range(_innerRing, _outerRing);
@@ -90,6 +92,9 @@ public class EnemiesCreator : MonoBehaviour
 
         return finRes;
     }
+
+
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
@@ -98,4 +103,5 @@ public class EnemiesCreator : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, new Vector2(_outerRing * 2, _outerRing * 2));
     }
+
 }

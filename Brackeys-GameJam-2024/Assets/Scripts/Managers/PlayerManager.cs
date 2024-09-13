@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject playerGameObject;
     public PlayerStats PlayerStats;
     public PlayerCombat PlayerCombat;
+    public PlayerMovement PlayerMovement;
     private void Awake()
     {
         instance = this;
