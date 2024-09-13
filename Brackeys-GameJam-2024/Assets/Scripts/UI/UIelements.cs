@@ -5,19 +5,30 @@ using UnityEngine;
 public class UIelements : MonoBehaviour
 {
     [SerializeField] GameObject Shop;
-    bool isEnabled;
+    [SerializeField] GameObject Stage;
+
+    bool ShopEnabled;
+    bool StageEnabled;
+
 
     private void Start()
     {
-        isEnabled = false;
+        ShopEnabled = false;
+
     }
     void Update()
     {
-        Time.timeScale = (!isEnabled ? 1.0f : 0.0f);
-        if (Input.GetKeyDown(KeyCode.E))
+        Time.timeScale = (!ShopEnabled && !StageEnabled)  ? 1.0f : 0.0f;
+        if (Input.GetKeyDown(KeyCode.E) && !StageEnabled)
         {
-            isEnabled = !isEnabled;
-            Shop.SetActive(isEnabled);
+            ShopEnabled = !ShopEnabled;
+            Shop.SetActive(ShopEnabled);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) && !ShopEnabled)
+        {
+            StageEnabled = !StageEnabled;
+            Stage.SetActive(StageEnabled);
         }
     }
 }
