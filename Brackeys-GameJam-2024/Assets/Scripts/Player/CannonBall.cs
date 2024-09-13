@@ -18,7 +18,7 @@ public class CannonBall : Projectil
 
     private void Update()
     {
-        ManageDestructionTime();
+        ManageDestructionTime(PlayerManager.instance.PlayerStats.FireRange);
         DestroyProjectil();
     }
     private void FixedUpdate()

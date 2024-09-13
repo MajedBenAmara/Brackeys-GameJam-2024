@@ -6,6 +6,8 @@ public class MermaidWaves : Projectil
 {
     [SerializeField]
     private float _wavesDamage = 2f;
+    [SerializeField]
+    private float _range; 
 
     private void Start()
     {
@@ -20,7 +22,7 @@ public class MermaidWaves : Projectil
 
     private void Update()
     {
-        ManageDestructionTime();
+        ManageDestructionTime(_range);
         DestroyProjectil();
     }
     private void FixedUpdate()
