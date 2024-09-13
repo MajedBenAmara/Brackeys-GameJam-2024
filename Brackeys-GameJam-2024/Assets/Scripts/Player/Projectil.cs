@@ -18,9 +18,9 @@ public class Projectil : MonoBehaviour
         _rb.velocity = _moveDirection * _travelSpeed ;
     }
 
-    protected void ManageDestructionTime()
+    protected void ManageDestructionTime(float range)
     {
-        if(Time.time - _instantiationTime > PlayerManager.instance.PlayerStats.FireRange)
+        if(Time.time - _instantiationTime > range)
         {
             _canDestroy = true;
         }

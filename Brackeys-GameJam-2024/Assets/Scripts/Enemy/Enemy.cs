@@ -88,6 +88,8 @@ public class Enemy : MonoBehaviour
     // Defining what happen when the enemy is dead
     private void Death()
     {
+        PlayerManager.instance.PlayerStats.IncreaseKillScore();
+        CombatStageManager.instance.CheckClearCondition();
         Destroy(gameObject);
     }
 
