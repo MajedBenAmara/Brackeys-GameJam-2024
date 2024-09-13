@@ -1,13 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBtn : MonoBehaviour
 {
+    public static event Action<int> OnKillIncrease;
+
     public string[] EnemiesType;
     public int[] EnemiesNumber;
 
     private EnemyToCreate[] _enemy;
+
+    public int TotalEnemyNumber;
 
     public void EnterStage()
     {
@@ -24,5 +29,17 @@ public class EnemyBtn : MonoBehaviour
 
         EnemiesCreator.Instance.StartCreateProcess(_enemy);
         EnemiesCreator.Instance.StartCoroutine(EnemiesCreator.Instance.CreateEnemy());
+        CalculateEnemyNumber();
+        OnKillIncrease?.Invoke(TotalEnemyNumber);
+    }
+
+    private void CalculateEnemyNumber()
+    {
+        foreach (var item in EnemiesNumber)
+        {
+            TotalEnemyNumber += item;
+        }
+
+        Debug.Log("Total Enemy Number = " + TotalEnemyNumber);
     }
 }

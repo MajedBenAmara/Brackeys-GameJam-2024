@@ -47,4 +47,7 @@ MonoBehaviour:
   _innerRing: 7
   _outerRing: 9
   _crationCD: 1
-  _enemy: []
+  _enemy:
+  - {fileID: 7634392206098250036, guid: a19948ad24e93af4ba85ea9ca72542f1, type: 3}
+  - {fileID: 3855069382358271805, guid: 27fc67e4c29b7cb4ab0ac7ffa33d6353, type: 3}
+  - {fileID: 6457407524033592311, guid: 6afc7e22def44fc499a07f28c2df1bdd, type: 3}

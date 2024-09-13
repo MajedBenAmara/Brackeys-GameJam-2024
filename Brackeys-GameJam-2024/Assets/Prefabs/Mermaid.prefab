@@ -293,7 +293,7 @@ MonoBehaviour:
   EnemyName: Mermaid
   _health: 10
   _damage: 1
-  Speed: 2
+  Speed: 1
   _distanceFromPlayer: 4.54
   _model: {fileID: 260306578214798372}
   _escapeDistance: 2.94

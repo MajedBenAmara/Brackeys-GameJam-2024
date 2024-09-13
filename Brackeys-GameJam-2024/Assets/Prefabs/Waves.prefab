@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _travelSpeed: 5
   _wavesDamage: 2
+  _range: 1
 --- !u!50 &7158842220541071730
 Rigidbody2D:
   serializedVersion: 4

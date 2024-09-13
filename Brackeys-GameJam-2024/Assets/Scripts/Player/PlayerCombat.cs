@@ -6,7 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     internal Vector2 FireDirection;
     [SerializeField]
-    private Transform _shipModel;
+    private Transform _playerOrientation;
     [SerializeField]
     private Transform _cannonballs;
     [SerializeField]
@@ -28,7 +28,7 @@ public class PlayerCombat : MonoBehaviour
         // calculating the direction from the weapon holder to the mouse
         _shootDirection = (_mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
 
-        _shipModel.up = FireDirection = -_shootDirection;
+        _playerOrientation.up = FireDirection = -_shootDirection;
     }
 
     private void ManageFireRate() 
@@ -49,6 +49,7 @@ public class PlayerCombat : MonoBehaviour
         if (_canFire)
         {
             Instantiate(_cannonballs, _firePoint.position, _firePoint.rotation);
+            SoundMusicManager.Instance.PlayCannonBallSFX();
         }
     }  
 }
