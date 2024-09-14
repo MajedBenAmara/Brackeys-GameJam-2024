@@ -936,26 +936,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 940685381675763453, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3914314816882897516, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
-      propertyPath: m_Radius
-      value: 1.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 3914314816882897516, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4058477268313352779, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
-      propertyPath: _damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4058477268313352779, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
-      propertyPath: _health
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8162733916925420427, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
