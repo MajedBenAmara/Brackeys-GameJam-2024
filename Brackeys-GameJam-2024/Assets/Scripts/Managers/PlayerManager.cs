@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     public PlayerMovement PlayerMovement;
 
     public GameObject StageSelectScreen;
+    public GameObject ShopScreen;
+
     private void Awake()
     {
         instance = this;

@@ -14,8 +14,11 @@ public class EnemyBtn : MonoBehaviour
 
     public int TotalEnemyNumber;
 
+    public GameObject Boss;
+
     public void EnterStage()
     {
+        FindAnyObjectByType<AudioManager>().Play("EnterCombat");
         _enemy = new EnemyToCreate[EnemiesType.Length];
         for (int i = 0; i < EnemiesType.Length; i++)
         {
@@ -41,5 +44,10 @@ public class EnemyBtn : MonoBehaviour
         }
 
         Debug.Log("Total Enemy Number = " + TotalEnemyNumber);
+    }
+
+    public void SpawnBoss()
+    {
+        Instantiate(Boss, Vector3.zero, Quaternion.identity);
     }
 }

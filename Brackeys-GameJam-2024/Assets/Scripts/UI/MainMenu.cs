@@ -13,6 +13,9 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         EnableScreen(MenuScreen[0]);
+        FindAnyObjectByType<AudioManager>().Stop("Combat");
+        FindAnyObjectByType<AudioManager>().Stop("Stage");
+        FindAnyObjectByType<AudioManager>().Stop("Shop");
         FindAnyObjectByType<AudioManager>().Play("Menu");
     }
     public void LoadScene(string Scene)

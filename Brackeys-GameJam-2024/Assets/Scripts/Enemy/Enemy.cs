@@ -41,6 +41,10 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.SendMessage("ReceiveDamage", _damage);
+            if(EnemyName == "Shark")
+            {
+                _ModelAnim.Play("attack_anim");
+            }
         }
 
 
@@ -51,6 +55,10 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.SendMessage("ReceiveDamage", _damage);
+            if (EnemyName == "Shark")
+            {
+                _ModelAnim.Play("attack_anim");
+            }
         }
 
     }
@@ -80,6 +88,7 @@ public class Enemy : MonoBehaviour
     public void ReceiveDamage(float damage)
     {
         _health -= damage;
+        GetComponent<FlashEffect>().NormalFlash();
         ManageHealth();
     }
 
@@ -91,7 +100,7 @@ public class Enemy : MonoBehaviour
         }
     }
     // Defining what happen when the enemy is dead
-    private void Death()
+    protected virtual void Death()
     {
         PlayerManager.instance.PlayerStats.IncreaseKillScore();
         CombatStageManager.instance.CheckClearCondition();

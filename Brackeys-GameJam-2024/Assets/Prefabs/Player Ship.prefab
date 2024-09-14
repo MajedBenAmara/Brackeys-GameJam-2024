@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 2329223977883332404}
   - component: {fileID: 8854585783328969822}
   - component: {fileID: 4674820711394621729}
+  - component: {fileID: 1875635449445154747}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Player
@@ -457,6 +458,7 @@ MonoBehaviour:
   TimeBetweenDamage: 1
   Gold: 10000
   KillScore: 0
+  HpSlider: {fileID: 0}
 --- !u!58 &4674820711394621729
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -491,7 +493,23 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.71
+  m_Radius: 0.55
+--- !u!114 &1875635449445154747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160707543686448300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ac0c277a457cc44b6d3cfa3c14d78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _normalFlashMaterial: {fileID: 2100000, guid: 3f711e56c98eaec468ace2744d116b19, type: 2}
+  FlashDuration: 0.5
+  _spriteRenderer: {fileID: 1033562799574899612}
+  _originalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!1 &9186945919508562934
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +617,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1451019324, guid: 66bfd5607f838e54eaa9da74d7fd3ebe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
