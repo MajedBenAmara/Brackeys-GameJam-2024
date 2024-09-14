@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 5942610308009552633}
   - component: {fileID: 2587058290792536424}
   - component: {fileID: 7806970235110438080}
+  - component: {fileID: -2431414455772055973}
   m_Layer: 0
   m_Name: Merman
   m_TagString: Enemy
@@ -206,6 +207,22 @@ MonoBehaviour:
   _model: {fileID: 8552619676382426543}
   _ModelAnim: {fileID: 5121457471621621605}
   _timeBetweenAttacks: 0.3
+--- !u!114 &-2431414455772055973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3855069382358271805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ac0c277a457cc44b6d3cfa3c14d78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _normalFlashMaterial: {fileID: 2100000, guid: 3f711e56c98eaec468ace2744d116b19, type: 2}
+  FlashDuration: 0.5
+  _spriteRenderer: {fileID: 3324080749665401170}
+  _originalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!1 &7587116786272852942
 GameObject:
   m_ObjectHideFlags: 0
