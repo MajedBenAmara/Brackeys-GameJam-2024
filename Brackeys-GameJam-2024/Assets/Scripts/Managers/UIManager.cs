@@ -113,11 +113,17 @@ public class UIManager : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        FindAnyObjectByType<AudioManager>().Stop("Combat");
+        FindAnyObjectByType<AudioManager>().Stop("Stage");
+        FindAnyObjectByType<AudioManager>().Stop("Shop");
         SceneManager.LoadScene(0);
     }
 
     public void GoMainMenu(string me)
     {
+        FindAnyObjectByType<AudioManager>().Stop("Combat");
+        FindAnyObjectByType<AudioManager>().Stop("Stage");
+        FindAnyObjectByType<AudioManager>().Stop("Shop");
         SceneManager.LoadScene(me);
     }
 
