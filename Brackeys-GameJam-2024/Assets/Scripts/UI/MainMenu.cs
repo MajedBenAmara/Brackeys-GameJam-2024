@@ -13,10 +13,13 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         EnableScreen(MenuScreen[0]);
+        FindAnyObjectByType<AudioManager>().Play("Menu");
     }
     public void LoadScene(string Scene)
     {
+        FindAnyObjectByType<AudioManager>().Stop("Menu");
         SceneManager.LoadScene(Scene);
+
     }
 
     public void EnableScreen(GameObject Screen)

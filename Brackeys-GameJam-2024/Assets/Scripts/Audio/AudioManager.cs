@@ -42,7 +42,7 @@ public partial class AudioManager : MonoBehaviour
 
     void Start()
     {
-        //Play("Theme");
+        Play("Loop");
     }
 
     public void Play(string name)
@@ -55,6 +55,19 @@ public partial class AudioManager : MonoBehaviour
         }
 
         s.source.Play();
+        s.source.pitch = s.pitch;
+    }
+
+    public void PlayOnUpdate(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+
+        if (!s.source.isPlaying) s.source.Play();
         s.source.pitch = s.pitch;
     }
 
