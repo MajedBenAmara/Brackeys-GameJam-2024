@@ -6,6 +6,8 @@ public class BossProjectil : Projectil
 {
     [SerializeField]
     private float _range;
+    [SerializeField]
+    private float _damage;
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -25,5 +27,10 @@ public class BossProjectil : Projectil
     private void FixedUpdate()
     {
         MoveProjectil();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        HitTarget(collision, "Player", _damage);
     }
 }

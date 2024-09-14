@@ -100,7 +100,7 @@ public class Enemy : MonoBehaviour
         }
     }
     // Defining what happen when the enemy is dead
-    private void Death()
+    protected virtual void Death()
     {
         PlayerManager.instance.PlayerStats.IncreaseKillScore();
         CombatStageManager.instance.CheckClearCondition();
