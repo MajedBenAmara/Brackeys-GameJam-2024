@@ -43,6 +43,10 @@ public partial class AudioManager : MonoBehaviour
     void Start()
     {
         Play("Loop");
+
+        Stop("Combat");
+        Stop("Stage");
+        Stop("Shop");
     }
 
     public void Play(string name)
@@ -53,9 +57,11 @@ public partial class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found");
             return;
         }
-
-        s.source.Play();
-        s.source.pitch = s.pitch;
+        if (s.source != null)
+        { 
+            s.source.Play();
+            s.source.pitch = s.pitch;
+        }
     }
 
     public void PlayOnUpdate(string name)
@@ -67,8 +73,11 @@ public partial class AudioManager : MonoBehaviour
             return;
         }
 
-        if (!s.source.isPlaying && s.source != null) s.source.Play();
-        s.source.pitch = s.pitch;
+        if (!s.source.isPlaying && s.source != null)
+        {
+            s.source.Play();
+            s.source.pitch = s.pitch;
+        }
     }
 
     public void Pitch(float Pitch)

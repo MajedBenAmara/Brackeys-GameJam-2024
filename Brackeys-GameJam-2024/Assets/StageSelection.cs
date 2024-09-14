@@ -23,6 +23,7 @@ public class StageSelection : MonoBehaviour
 
     void CopyData(Node node)
     {
+        FindAnyObjectByType<AudioManager>().Play("StageSelect");
         EnemyText.text = null;
         StageText.text = null;
         StageText.text += $"{node.Name}";

@@ -14,6 +14,7 @@ public class Item : MonoBehaviour
 
     public void Buy()
     {
+        FindAnyObjectByType<AudioManager>().Play("Upgrade");
         PowerUp?.Invoke();  
     }
     public void Health()

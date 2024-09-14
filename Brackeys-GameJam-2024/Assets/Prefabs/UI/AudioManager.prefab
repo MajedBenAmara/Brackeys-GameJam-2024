@@ -101,3 +101,35 @@ MonoBehaviour:
     source: {fileID: 0}
     Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
     AffectedbyTime: 0
+  - name: Upgrade
+    clip: {fileID: 8300000, guid: 36e5fa0fbac52be408895fc0fc35fd8b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0
+  - name: EnterCombat
+    clip: {fileID: 8300000, guid: 1522e702f72da1a44b98ecf5c8954a34, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0
+  - name: Dead
+    clip: {fileID: 8300000, guid: 243f02819a241be47a8dfed7e6e76ac3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0
+  - name: StageSelect
+    clip: {fileID: 8300000, guid: 175705f931207e6439fc1e4b9067bb36, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0

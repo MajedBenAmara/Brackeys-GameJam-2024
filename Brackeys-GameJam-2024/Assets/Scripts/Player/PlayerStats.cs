@@ -22,7 +22,15 @@ public class PlayerStats : MonoBehaviour
     {
         HpSlider.value = CurrentHealth / MaxHealth;
     }
+    private void Update()
+    {
+        HpSlider.value = CurrentHealth / MaxHealth;
 
+        if (CurrentHealth > MaxHealth)
+        {
+            CurrentHealth = MaxHealth;
+        }
+    }
     public void ReceiveDamage(float damage)
     {
         if(Time.time - _damageMoment >= TimeBetweenDamage)
@@ -66,6 +74,21 @@ public class PlayerStats : MonoBehaviour
         Gold -= gold;
         FireRange += fr;
 
+    }
+
+    public void IncreaseDamage(float fr, int gold)
+    {
+        if (gold > Gold) return;
+        Gold -= gold;
+        PlayerDamage += fr;
+
+    }
+
+    public void IncreaseSpeed(float fr, int gold)
+    {
+        if (gold > Gold) return;
+        Gold -= gold;
+        PlayerSpeed += fr;
     }
 
 
