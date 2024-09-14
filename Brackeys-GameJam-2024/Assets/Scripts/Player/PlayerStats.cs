@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -13,22 +14,22 @@ public class PlayerStats : MonoBehaviour
     public float TimeBetweenDamage = 1f;
     public int Gold = 10000;
     public int KillScore = 0;
+    public Slider HpSlider;
 
     private float _damageMoment;
 
-
-    private void Update()
+    private void Start()
     {
-        if(CurrentHealth > MaxHealth)
-        {
-            CurrentHealth = MaxHealth;
-        }
+        HpSlider.value = CurrentHealth / MaxHealth;
     }
+
     public void ReceiveDamage(float damage)
     {
-        if(Time.time - _damageMoment >= TimeBetweenDamage && CurrentHealth>0)
+        if(Time.time - _damageMoment >= TimeBetweenDamage)
         {
             CurrentHealth -= damage;
+            HpSlider.value = CurrentHealth / MaxHealth;
+            GetComponent<FlashEffect>().NormalFlash();
             CheckHP();
             _damageMoment = Time.time;
         }
@@ -76,13 +77,6 @@ public class PlayerStats : MonoBehaviour
             UIManager.Instance.ActivateDeathScreen();   
             //gameObject.SetActive(false);
         }
-    }
-
-    public void IncreaseDamage(float fr, int gold)
-    {
-        if (gold > Gold) return;
-        Gold -= gold;
-        PlayerDamage += fr;
     }
 
     public void IncreaseKillScore()

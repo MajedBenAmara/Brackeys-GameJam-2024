@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 9060326623186710746}
   - component: {fileID: 4191189389200701236}
   - component: {fileID: 8814359723431432845}
+  - component: {fileID: -7815977096137301742}
   m_Layer: 0
   m_Name: Mermaid
   m_TagString: Enemy
@@ -133,6 +134,22 @@ MonoBehaviour:
   _firePoint: {fileID: 2589021914129960091}
   _waves: {fileID: 3869927129238888251, guid: 15642cb1ea288c040b4da6c925c67f83, type: 3}
   _fireRate: 1
+--- !u!114 &-7815977096137301742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7634392206098250036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ac0c277a457cc44b6d3cfa3c14d78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _normalFlashMaterial: {fileID: 2100000, guid: 3f711e56c98eaec468ace2744d116b19, type: 2}
+  FlashDuration: 0.5
+  _spriteRenderer: {fileID: 3121109460668883097}
+  _originalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!1 &9187499468886931612
 GameObject:
   m_ObjectHideFlags: 0
