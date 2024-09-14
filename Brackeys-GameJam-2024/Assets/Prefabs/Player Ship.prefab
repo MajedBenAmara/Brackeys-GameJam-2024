@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 2329223977883332404}
   - component: {fileID: 8854585783328969822}
   - component: {fileID: 4674820711394621729}
-  - component: {fileID: 520592010704233610}
+  - component: {fileID: 1875635449445154747}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Player
@@ -494,7 +494,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.55
---- !u!114 &520592010704233610
+--- !u!114 &1875635449445154747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -617,7 +617,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1451019324, guid: 66bfd5607f838e54eaa9da74d7fd3ebe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

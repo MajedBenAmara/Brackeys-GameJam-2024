@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss : MonoBehaviour
+public class Boss : Enemy
 {
     private bool _canFire;
     private float _fireTime;
+
 
     [SerializeField]
     private GameObject projectil;
@@ -18,6 +19,8 @@ public class Boss : MonoBehaviour
     private float _attackDuration, _restDuration;
     [SerializeField]
     private float _rotationSpeed;
+    [SerializeField]
+    private GameObject _endGameScreen;
 
     private bool _comboActive = false;
     private bool _canCreateProjectil = true;
@@ -129,4 +132,10 @@ public class Boss : MonoBehaviour
 
     }
 
+    protected override void Death()
+    {
+        _endGameScreen.SetActive(true);
+        Destroy(gameObject);
+
+    }
 }
