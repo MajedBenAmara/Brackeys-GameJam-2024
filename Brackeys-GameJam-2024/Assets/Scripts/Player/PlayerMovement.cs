@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        if(!PlayerManager.instance.StageSelectScreen.activeSelf)
+        if(!PlayerManager.instance.StageSelectScreen.activeSelf || !PlayerManager.instance.ShopScreen.activeSelf)
             RB.velocity = InputAxis * PlayerManager.instance.PlayerStats.PlayerSpeed;
     }
 }

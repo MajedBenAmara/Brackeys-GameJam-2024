@@ -25,6 +25,10 @@ public class Item : MonoBehaviour
     {
         PlayerManager.instance.playerGameObject.GetComponent<PlayerStats>().AddMaxHealth(Size, Price);
     }
+    public void Damage()
+    {
+        PlayerManager.instance.playerGameObject.GetComponent<PlayerStats>().IncreaseDamage(Size, Price);
+    }
 
     public void Firerate()
     {

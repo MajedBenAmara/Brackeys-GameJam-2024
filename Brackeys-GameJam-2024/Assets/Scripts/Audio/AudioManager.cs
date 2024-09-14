@@ -67,7 +67,7 @@ public partial class AudioManager : MonoBehaviour
             return;
         }
 
-        if (!s.source.isPlaying) s.source.Play();
+        if (!s.source.isPlaying && s.source != null) s.source.Play();
         s.source.pitch = s.pitch;
     }
 

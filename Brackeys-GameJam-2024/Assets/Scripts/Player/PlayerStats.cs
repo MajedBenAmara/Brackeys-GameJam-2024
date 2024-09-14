@@ -16,9 +16,17 @@ public class PlayerStats : MonoBehaviour
 
     private float _damageMoment;
 
+
+    private void Update()
+    {
+        if(CurrentHealth > MaxHealth)
+        {
+            CurrentHealth = MaxHealth;
+        }
+    }
     public void ReceiveDamage(float damage)
     {
-        if(Time.time - _damageMoment >= TimeBetweenDamage)
+        if(Time.time - _damageMoment >= TimeBetweenDamage && CurrentHealth>0)
         {
             CurrentHealth -= damage;
             CheckHP();
@@ -68,6 +76,13 @@ public class PlayerStats : MonoBehaviour
             UIManager.Instance.ActivateDeathScreen();   
             //gameObject.SetActive(false);
         }
+    }
+
+    public void IncreaseDamage(float fr, int gold)
+    {
+        if (gold > Gold) return;
+        Gold -= gold;
+        PlayerDamage += fr;
     }
 
     public void IncreaseKillScore()

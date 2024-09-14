@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class UIManager : MonoBehaviour
     private GameObject _pauseMenu;
     [SerializeField]
     private GameObject _deathScreen;
+    [SerializeField]
+    private Text _Score;
+
 
     private void Awake()
     {
@@ -32,7 +36,7 @@ public class UIManager : MonoBehaviour
 
     public void ManagePausing(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Hello");
+       /* Debug.Log("Hello");
         if (ctx.performed)
         {
 
@@ -45,7 +49,7 @@ public class UIManager : MonoBehaviour
                 PauseGame();
             }
         }
-
+       */
     }
 
     private void Update()
@@ -56,10 +60,13 @@ public class UIManager : MonoBehaviour
             if (_pauseMenu.activeSelf)
             {
                 Replay();
+                FindAnyObjectByType<AudioManager>().Play("UnPause");
+
             }
             else
             {
                 PauseGame();
+                FindAnyObjectByType<AudioManager>().Play("Pause");
             }
         }
         ManageMusic();
@@ -134,6 +141,7 @@ public class UIManager : MonoBehaviour
 
     public void ActivateDeathScreen()
     {
+        _Score.text = $"Score : {PlayerManager.instance.PlayerStats.KillScore}";
         _deathScreen.SetActive(true);
     }
 }

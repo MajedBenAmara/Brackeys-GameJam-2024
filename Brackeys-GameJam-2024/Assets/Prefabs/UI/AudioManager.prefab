@@ -85,3 +85,19 @@ MonoBehaviour:
     source: {fileID: 0}
     Mixer: {fileID: 1953426080552230546, guid: bfafc507a9493b440bcde3af04934678, type: 2}
     AffectedbyTime: 0
+  - name: Pause
+    clip: {fileID: 8300000, guid: 050fa081654e7384ab1a03a30174db61, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0
+  - name: UnPause
+    clip: {fileID: 8300000, guid: 727d1de484fa4d24e92e9ed551931681, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0
