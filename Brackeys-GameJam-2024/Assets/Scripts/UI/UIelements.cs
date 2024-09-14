@@ -14,7 +14,7 @@ public class UIelements : MonoBehaviour
     private void Start()
     {
         ShopEnabled = false;
-
+        StageEnabled = false;
     }
     void Update()
     {
@@ -30,5 +30,18 @@ public class UIelements : MonoBehaviour
             StageEnabled = !StageEnabled;
             Stage.SetActive(StageEnabled);
         }
+    }
+
+
+    void EnableShop()
+    {
+        ShopEnabled = !ShopEnabled;
+        Shop.SetActive(ShopEnabled);
+    }
+
+    void EnableStage() 
+    {
+        StageEnabled = !StageEnabled;
+        Stage.SetActive(StageEnabled);
     }
 }
