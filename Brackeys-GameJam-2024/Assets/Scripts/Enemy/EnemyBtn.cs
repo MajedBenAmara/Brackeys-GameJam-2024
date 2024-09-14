@@ -18,6 +18,7 @@ public class EnemyBtn : MonoBehaviour
 
     public void EnterStage()
     {
+        FindAnyObjectByType<AudioManager>().Play("EnterCombat");
         _enemy = new EnemyToCreate[EnemiesType.Length];
         for (int i = 0; i < EnemiesType.Length; i++)
         {
