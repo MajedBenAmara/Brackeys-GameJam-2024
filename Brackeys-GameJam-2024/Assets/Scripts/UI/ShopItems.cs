@@ -27,7 +27,7 @@ public class ShopItems : MonoBehaviour
         }
     }
 
-    private void UpdateScreen(Item referance)
+    public void UpdateScreen(Item referance)
     {
         ItemSprite.sprite = referance.Sprite;
         Name.text = referance.Name;
@@ -35,9 +35,19 @@ public class ShopItems : MonoBehaviour
         Price.text = $"Price {referance.Price}G";
         Buy.onClick.RemoveAllListeners();
         Buy.onClick.AddListener(referance.Buy);
+        if (referance.currentLevel >= referance.Levels.Count && !referance.unlimited)
+        {
+            Buy.gameObject.SetActive(false);
+        }
+        else
+        {
+            Buy.gameObject.SetActive(true);
+
+        }
+
     }
 
-
+    
 
     //Need to changed to different script this is for testing
     public Text CurGold;
@@ -58,5 +68,6 @@ public class ShopItems : MonoBehaviour
     private void Update()
     {
         updategold();
+        
     }
 }
