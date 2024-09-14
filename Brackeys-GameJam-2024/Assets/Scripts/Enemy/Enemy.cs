@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         {
             Vector2 directionToPlayer = PlayerManager.instance.playerGameObject.transform.position - transform.position;
             transform.Translate(directionToPlayer.normalized * Speed * Time.deltaTime);
-            _ModelAnim.Play("chase_anim");
+            if (_ModelAnim != null) _ModelAnim.Play("chase_anim");
 
         }
 
