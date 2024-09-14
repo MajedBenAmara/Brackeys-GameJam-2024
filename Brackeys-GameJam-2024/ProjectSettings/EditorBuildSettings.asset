@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3a7ca1d982bcac74b8f2151a1b50832b
+  - enabled: 1
+    path: Assets/Scenes/TanPi.unity
+    guid: 8285a5f6c8640454b980850aececf78e
+  - enabled: 1
+    path: Assets/Scenes/TanPiGame.unity
+    guid: 0be18e272a003ed4c8ac59f8fdc808af
   m_configObjects: {}
