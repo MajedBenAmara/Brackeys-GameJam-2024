@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour
     protected float _distanceFromPlayer = .7f;
     [SerializeField]
     protected Transform _model;
+    [SerializeField]
+    protected Animator _ModelAnim;
+
     internal bool EnemyIsDead = false;
 
 
@@ -26,6 +29,8 @@ public class Enemy : MonoBehaviour
         {
             Vector2 directionToPlayer = PlayerManager.instance.playerGameObject.transform.position - transform.position;
             transform.Translate(directionToPlayer.normalized * Speed * Time.deltaTime);
+            _ModelAnim.Play("chase_anim");
+
         }
 
     }
