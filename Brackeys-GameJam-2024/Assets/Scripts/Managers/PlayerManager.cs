@@ -9,9 +9,13 @@ public class PlayerManager : MonoBehaviour
     public PlayerStats PlayerStats;
     public PlayerCombat PlayerCombat;
     public PlayerMovement PlayerMovement;
+
+    public GameObject StageSelectScreen;
     private void Awake()
     {
         instance = this;
     }
+
+
 
 }

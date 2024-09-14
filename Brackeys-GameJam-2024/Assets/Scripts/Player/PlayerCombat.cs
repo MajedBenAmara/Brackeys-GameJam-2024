@@ -46,7 +46,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void FireCanon()
     {
-        if (_canFire)
+        if (_canFire && !PlayerManager.instance.StageSelectScreen.activeSelf)
         {
             Instantiate(_cannonballs, _firePoint.position, _firePoint.rotation);
             //SoundMusicManager.Instance.PlayCannonBallSFX();
