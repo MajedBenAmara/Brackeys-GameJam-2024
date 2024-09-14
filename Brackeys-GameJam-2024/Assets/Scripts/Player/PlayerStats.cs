@@ -65,8 +65,8 @@ public class PlayerStats : MonoBehaviour
         if(CurrentHealth <= 0)
         {
             CurrentHealth = 0;
-            UIManager.Instance.ActivateDeathScreen();
-            gameObject.SetActive(false);
+            UIManager.Instance.ActivateDeathScreen();   
+            //gameObject.SetActive(false);
         }
     }
 

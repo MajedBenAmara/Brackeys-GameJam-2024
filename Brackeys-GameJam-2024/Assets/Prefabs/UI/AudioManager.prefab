@@ -45,8 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 1fab6ca165e6c4743867802a3cec6e97, type: 3}
+  - name: Loop
+    clip: {fileID: 8300000, guid: fc07f8185e7d42844ae72b66fe3172d0, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    Mixer: {fileID: 1395162318519122482, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0
+  - name: Menu
+    clip: {fileID: 8300000, guid: 4202874fdfa50ce43ab2b4f3f954627d, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -61,8 +69,16 @@ MonoBehaviour:
     source: {fileID: 0}
     Mixer: {fileID: 1953426080552230546, guid: bfafc507a9493b440bcde3af04934678, type: 2}
     AffectedbyTime: 0
-  - name: Shop
+  - name: Stage
     clip: {fileID: 8300000, guid: 8551d9439653fcb449dc854ab4be9e97, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    Mixer: {fileID: 1953426080552230546, guid: bfafc507a9493b440bcde3af04934678, type: 2}
+    AffectedbyTime: 0
+  - name: Shop
+    clip: {fileID: 8300000, guid: 1fab6ca165e6c4743867802a3cec6e97, type: 3}
     volume: 1
     pitch: 1
     loop: 1

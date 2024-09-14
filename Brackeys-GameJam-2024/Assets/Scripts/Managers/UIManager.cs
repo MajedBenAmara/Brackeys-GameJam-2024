@@ -9,6 +9,11 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     [SerializeField]
+    private GameObject _shop;
+    [SerializeField]
+    private GameObject _selectionStage;
+
+    [SerializeField]
     private GameObject _pauseMenu;
     [SerializeField]
     private GameObject _deathScreen;
@@ -20,7 +25,9 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         _pauseMenu.SetActive(false);
+        _deathScreen.SetActive(false);
     }
 
     public void ManagePausing(InputAction.CallbackContext ctx)
@@ -55,8 +62,40 @@ public class UIManager : MonoBehaviour
                 PauseGame();
             }
         }
+        ManageMusic();
+
     }
 
+    private void ManageMusic()
+    {
+        if (_selectionStage.activeSelf)
+        {
+            FindAnyObjectByType<AudioManager>().PlayOnUpdate("Stage");
+        }
+        else
+        {
+            FindAnyObjectByType<AudioManager>().Stop("Stage");
+        }
+
+        if (_shop.activeSelf)
+        {
+            FindAnyObjectByType<AudioManager>().PlayOnUpdate("Shop");
+        }
+        else
+        {
+            FindAnyObjectByType<AudioManager>().Stop("Shop");
+        }
+
+        if (!(_selectionStage.activeSelf || _shop.activeSelf))
+        {
+            FindAnyObjectByType<AudioManager>().PlayOnUpdate("Combat");
+        }
+        else
+        {
+            FindAnyObjectByType<AudioManager>().Stop("Combat");
+
+        }
+    }
 
     public void PauseGame()
     {
