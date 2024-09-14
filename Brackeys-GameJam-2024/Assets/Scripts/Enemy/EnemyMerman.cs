@@ -21,7 +21,7 @@ public class EnemyMerman : Enemy
             _ModelAnim.Play("attack_anim");
             //_anim.Play(_orcIdleAnim);
             if (_ModelAnim.GetCurrentAnimatorStateInfo(0).IsName("attack_anim")
-                    && _ModelAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f)
+                    && _ModelAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > .99f)
             {
                 _ModelAnim.Play("idle_anim");
                 _attackMoment = Time.time;
