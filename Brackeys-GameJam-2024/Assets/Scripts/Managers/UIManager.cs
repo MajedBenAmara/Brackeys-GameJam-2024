@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
 
     public void ManagePausing(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Hello");
         if (ctx.performed)
         {
 
@@ -38,6 +39,22 @@ public class UIManager : MonoBehaviour
             }
         }
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            if (_pauseMenu.activeSelf)
+            {
+                Replay();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
     }
 
 
@@ -58,6 +75,11 @@ public class UIManager : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void GoMainMenu(string me)
+    {
+        SceneManager.LoadScene(me);
     }
 
     public void QuitGame()

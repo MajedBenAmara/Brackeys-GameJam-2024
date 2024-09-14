@@ -49,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
         if (_canFire)
         {
             Instantiate(_cannonballs, _firePoint.position, _firePoint.rotation);
-            SoundMusicManager.Instance.PlayCannonBallSFX();
+            //SoundMusicManager.Instance.PlayCannonBallSFX();
         }
     }  
 }

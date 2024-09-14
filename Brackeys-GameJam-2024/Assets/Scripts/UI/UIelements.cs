@@ -14,9 +14,13 @@ public class UIelements : MonoBehaviour
     private void Start()
     {
         ShopEnabled = false;
+        StageEnabled = false;
+        Shop.SetActive(false);
+        Stage.SetActive(false);
 
+        EnableStage();
     }
-    void Update()
+    /*void Update()
     {
         Time.timeScale = (!ShopEnabled && !StageEnabled)  ? 1.0f : 0.0f;
         if (Input.GetKeyDown(KeyCode.E) && !StageEnabled)
@@ -30,5 +34,23 @@ public class UIelements : MonoBehaviour
             StageEnabled = !StageEnabled;
             Stage.SetActive(StageEnabled);
         }
+    }*/
+
+
+    public void EnableShop()
+    {
+        ShopEnabled = !ShopEnabled;
+        Shop.SetActive(ShopEnabled);
+    }
+
+    public void EnableStage() 
+    {
+        StageEnabled = !StageEnabled;
+        Stage.SetActive(StageEnabled);
+    }
+
+    public void hidethis(GameObject refer)
+    { 
+        refer.SetActive(false); 
     }
 }
