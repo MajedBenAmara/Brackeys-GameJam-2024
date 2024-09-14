@@ -1810,6 +1810,10 @@ PrefabInstance:
       propertyPath: playerGameObject
       value: 
       objectReference: {fileID: 2029881323}
+    - target: {fileID: 219912137633011749, guid: 8bcb20be6c3dbd74196dffe9456bdee3, type: 3}
+      propertyPath: StageSelectScreen
+      value: 
+      objectReference: {fileID: 2050349417}
     - target: {fileID: 1446730432782187010, guid: 8bcb20be6c3dbd74196dffe9456bdee3, type: 3}
       propertyPath: m_Name
       value: PlayerManager
