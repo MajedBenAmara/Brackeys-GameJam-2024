@@ -41,6 +41,10 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.SendMessage("ReceiveDamage", _damage);
+            if(EnemyName == "Shark")
+            {
+                _ModelAnim.Play("attack_anim");
+            }
         }
 
 
@@ -51,6 +55,10 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.SendMessage("ReceiveDamage", _damage);
+            if (EnemyName == "Shark")
+            {
+                _ModelAnim.Play("attack_anim");
+            }
         }
 
     }
@@ -80,6 +88,7 @@ public class Enemy : MonoBehaviour
     public void ReceiveDamage(float damage)
     {
         _health -= damage;
+        GetComponent<FlashEffect>().NormalFlash();
         ManageHealth();
     }
 
