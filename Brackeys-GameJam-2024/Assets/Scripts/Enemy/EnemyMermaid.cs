@@ -44,6 +44,8 @@ public class EnemyMermaid : Enemy
         {
             transform.Translate(direction.normalized * Speed * Time.deltaTime);
             _dontFacePlayer = true;
+            _ModelAnim.Play("chase_anim");
+
         }
         else
         {
@@ -60,6 +62,7 @@ public class EnemyMermaid : Enemy
         {
             ManageFireRate();
             FireCanon();
+
         }
     }
 
@@ -73,6 +76,10 @@ public class EnemyMermaid : Enemy
         else
         {
             _canFire = false;
+            if(!_dontFacePlayer && _ModelAnim.GetCurrentAnimatorStateInfo(0).IsName("attack_anim")
+                    && _ModelAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > .99f)
+                _ModelAnim.Play("idle_anim");
+
         }
     }
 
@@ -81,6 +88,7 @@ public class EnemyMermaid : Enemy
         if (_canFire)
         {
             Instantiate(_waves, _firePoint.position, _firePoint.rotation);
+            _ModelAnim.Play("attack_anim");
         }
     }
     protected void ReverseFacePlayer()

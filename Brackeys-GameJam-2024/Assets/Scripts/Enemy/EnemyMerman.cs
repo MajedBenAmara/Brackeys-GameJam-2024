@@ -5,8 +5,6 @@ using UnityEngine;
 public class EnemyMerman : Enemy
 {
     [SerializeField]
-    private Animator _tridenAnim;
-    [SerializeField]
     private float _timeBetweenAttacks;
     private float _attackMoment;
 
@@ -20,12 +18,12 @@ public class EnemyMerman : Enemy
     {
         if (Time.time - _attackMoment > _timeBetweenAttacks)
         {
-            _tridenAnim.Play("swing_anim");
+            _ModelAnim.Play("attack_anim");
             //_anim.Play(_orcIdleAnim);
-            if (_tridenAnim.GetCurrentAnimatorStateInfo(0).IsName("swing_anim")
-                    && _tridenAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f)
+            if (_ModelAnim.GetCurrentAnimatorStateInfo(0).IsName("attack_anim")
+                    && _ModelAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f)
             {
-                _tridenAnim.Play("idle_anim");
+                _ModelAnim.Play("idle_anim");
                 _attackMoment = Time.time;
             }
         }
@@ -41,7 +39,6 @@ public class EnemyMerman : Enemy
         }
         else
         {
-            _tridenAnim.Play("idle_anim");
             ChasePlayer();
         }
     }
