@@ -8,6 +8,7 @@ public class CombatStageManager : MonoBehaviour
     public static CombatStageManager instance;
     public GameObject ClearStageScreen, StageSelectionScreen;
     public Text Stagefinish;
+    public Button enemyButton;
 
     internal bool StageIsClear = false;
 
@@ -23,6 +24,21 @@ public class CombatStageManager : MonoBehaviour
         EnemyBtn.OnKillIncrease += ChackKillCount;
     }
 
+    private void Update()
+    {
+        if (StageSelectionScreen != null)
+        {
+            if(StageSelectionScreen.GetComponent<StageSelection>().currentnode.IsCompleted)
+            {
+                enemyButton.interactable = false;
+            }
+            else
+            {
+                enemyButton.interactable = true;
+            }
+        }
+    }
+
     public void CheckClearCondition()
     {
         if(_totalEnemyNb == PlayerManager.instance.PlayerStats.TotalScore)
@@ -32,6 +48,7 @@ public class CombatStageManager : MonoBehaviour
            
             StageIsClear = true; 
             StageSelectionScreen.GetComponent<StageSelection>().currentnode.IsCompleted = true;
+            StageSelectionScreen.GetComponent<StageSelection>().disablecurbutton();
             ClearStageScreen.SetActive(true);
         }
     }

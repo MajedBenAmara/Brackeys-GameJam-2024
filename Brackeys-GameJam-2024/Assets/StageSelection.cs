@@ -25,11 +25,19 @@ public class StageSelection : MonoBehaviour
         CopyData(Default);
     }
 
+    public void disablecurbutton()
+    {
+        if(currentnode != null) { 
+            currentnode.GetComponent<Button>().interactable = false;
+        
+        }
+    }
+
     void CopyData(Node node)
     {
         if (node.IsCompleted) 
         {
-            node.GetComponent<Button>().enabled = false;
+            node.GetComponent<Button>().interactable = false;
             return;
 
         }

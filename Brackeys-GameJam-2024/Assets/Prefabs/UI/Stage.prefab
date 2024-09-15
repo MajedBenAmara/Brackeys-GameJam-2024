@@ -175,7 +175,9 @@ MonoBehaviour:
   - Shark
   - Merman
   EnemiesNumber: 020000000200000002000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &9019146931354999481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &896295352167407938
 RectTransform:
   m_ObjectHideFlags: 0
@@ -398,8 +400,10 @@ MonoBehaviour:
   - {fileID: 1618915575255237229}
   - {fileID: 7076757889750279180}
   - {fileID: 6238911222136048738}
+  Default: {fileID: 0}
   EnemyBtn: {fileID: 6317289680915380700}
   StageText: {fileID: 9220631736641433995}
+  currentnode: {fileID: 0}
   EnemyText: {fileID: 2983044659565247746}
 --- !u!1 &1582491353333504835
 GameObject:
@@ -497,7 +501,9 @@ MonoBehaviour:
   - Mermaid
   - Merman
   EnemiesNumber: 03000000050000000a000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &1808893348209075695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,7 +766,9 @@ MonoBehaviour:
   - Mermaid
   - Merman
   EnemiesNumber: 03000000050000000a000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &8849987764348493392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,7 +999,9 @@ MonoBehaviour:
   - Shark
   - Merman
   EnemiesNumber: 010000000200000003000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &8362368886117356330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,7 +1383,9 @@ MonoBehaviour:
   - Merman
   - Mermaid
   EnemiesNumber: 02000000050000000a000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &818186583775017891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,10 +1696,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 974706239760243875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.29751343, y: 0.044000003}
+  m_AnchorMax: {x: 0.92949086, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.4643194}
+  m_SizeDelta: {x: 0, y: 0.93267286}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2348482039370799253
 CanvasRenderer:
@@ -1710,7 +1722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1718,10 +1730,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 52cd02f4052ad9e42b62cca168e26092, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1745,7 +1757,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesType: []
   EnemiesNumber: 
+  boss: 0
   TotalEnemyNumber: 0
+  Boss: {fileID: 0}
 --- !u!1 &6910155643519410246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,7 +1935,9 @@ MonoBehaviour:
   - Merman
   - Shark
   EnemiesNumber: 0e000000030000000a000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &909091952186751298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2141,7 +2157,9 @@ MonoBehaviour:
   - Shark
   - Merman
   EnemiesNumber: 070000000700000007000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &1490352810181508663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,7 +2379,9 @@ MonoBehaviour:
   - Merman
   - Shark
   EnemiesNumber: 020000000400000006000000
-  Next: {fileID: 0}
+  Boss: 0
+  IsLocked: 1
+  IsCompleted: 0
 --- !u!114 &7831855442320300409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2474,8 +2494,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 17291df9a4c50e1498ec528e6843e13d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2554,4 +2574,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesType: []
   EnemiesNumber: 
+  boss: 0
   TotalEnemyNumber: 0
+  Boss: {fileID: 0}
