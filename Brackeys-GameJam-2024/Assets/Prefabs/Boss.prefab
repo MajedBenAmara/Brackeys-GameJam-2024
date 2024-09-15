@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _normalFlashMaterial: {fileID: 2100000, guid: 3f711e56c98eaec468ace2744d116b19, type: 2}
   FlashDuration: 0.5
-  _spriteRenderer: {fileID: 0}
+  _spriteRenderer: {fileID: 2039179229520397155}
   _originalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!58 &3914314816882897516
 CircleCollider2D:

@@ -29,9 +29,15 @@ public class Item : MonoBehaviour
 
     public int currentLevel = 0;
 
-    private void Start()
+    private void Awake()
     {
+        currentLevel = 0;
         UpdateItemDetails();
+        Name = Levels[currentLevel].Name;
+        Description = Levels[currentLevel].Description;
+        Size = Levels[currentLevel].Size;
+        Size2 = Levels[currentLevel].Size2;
+        Price = Levels[currentLevel].Price;
     }
     public void Buy()
     {

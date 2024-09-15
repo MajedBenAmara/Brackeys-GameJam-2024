@@ -59,7 +59,7 @@ public class ShopItems : MonoBehaviour
             $"Max Health: {PlayerManager.instance.PlayerStats.MaxHealth}\n" +
             $"Speed: {PlayerManager.instance.PlayerStats.PlayerSpeed}\n" +
             $"Damage: {PlayerManager.instance.PlayerStats.PlayerDamage}\n" +
-            $"Damage Resistance: {PlayerManager.instance.PlayerStats.TimeBetweenDamage}\n" +
+            $"Damage Resistance: {PlayerManager.instance.PlayerStats.Resistance}\n" +
             $"FireRate: {PlayerManager.instance.PlayerStats.FireRate}\n" +
             $"FireRange: {PlayerManager.instance.PlayerStats.FireRange}";
             
