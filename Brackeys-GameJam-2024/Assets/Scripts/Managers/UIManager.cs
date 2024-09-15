@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     private GameObject _deathScreen;
     [SerializeField]
     private Text _Score;
+    [SerializeField]
+    private Text _endScore;
 
 
     private void Awake()
@@ -141,7 +143,8 @@ public class UIManager : MonoBehaviour
 
     public void ActivateDeathScreen()
     {
-        _Score.text = $"Score : {PlayerManager.instance.PlayerStats.KillScore}";
+        _Score.text = $"Score : {PlayerManager.instance.PlayerStats.TotalScore}";
+        _endScore.text = $"Score : {PlayerManager.instance.PlayerStats.TotalScore}";
         _deathScreen.SetActive(true);
     }
 }

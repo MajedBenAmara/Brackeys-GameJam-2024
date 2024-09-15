@@ -9,7 +9,7 @@ public class EnemyBtn : MonoBehaviour
 
     public string[] EnemiesType;
     public int[] EnemiesNumber;
-
+    public bool boss;
     private EnemyToCreate[] _enemy;
 
     public int TotalEnemyNumber;
@@ -19,6 +19,12 @@ public class EnemyBtn : MonoBehaviour
     public void EnterStage()
     {
         FindAnyObjectByType<AudioManager>().Play("EnterCombat");
+        if (boss)
+        {
+            SpawnBoss();
+        }
+
+
         _enemy = new EnemyToCreate[EnemiesType.Length];
         for (int i = 0; i < EnemiesType.Length; i++)
         {
@@ -48,6 +54,7 @@ public class EnemyBtn : MonoBehaviour
 
     public void SpawnBoss()
     {
-        Instantiate(Boss, Vector3.zero, Quaternion.identity);
+        //Instantiate(Boss, Vector3.zero, Quaternion.identity);
+        Boss.SetActive(true);
     }
 }

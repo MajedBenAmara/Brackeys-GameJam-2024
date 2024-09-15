@@ -16,9 +16,12 @@ public class StageSelection : MonoBehaviour
     {
         foreach (Node node in Stages) 
         {
+            
             Button button = node.gameObject.GetComponent<Button>();
             button.onClick.AddListener(() => CopyData(node));
+            
         }
+
     }
 
     void CopyData(Node node)
@@ -33,5 +36,6 @@ public class StageSelection : MonoBehaviour
         }
         EnemyBtn.EnemiesType = node.EnemiesType;
         EnemyBtn.EnemiesNumber = node.EnemiesNumber;
+        EnemyBtn.boss = node.Boss;
     }
 }
