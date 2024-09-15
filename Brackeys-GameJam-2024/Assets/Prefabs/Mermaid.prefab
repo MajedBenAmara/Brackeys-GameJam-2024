@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: Mermaid
-  _health: 10
+  _health: 15
   _damage: 1
   Speed: 1
   _distanceFromPlayer: 4.54

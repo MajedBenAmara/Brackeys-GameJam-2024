@@ -143,7 +143,7 @@ public class UIManager : MonoBehaviour
 
     public void ActivateDeathScreen()
     {
-        _Score.text = $"Score : {PlayerManager.instance.PlayerStats.TotalScore}";
+        _Score.text = $"Score : {PlayerManager.instance.PlayerStats.KillScore}";
         _endScore.text = $"Score : {PlayerManager.instance.PlayerStats.TotalScore}";
         _deathScreen.SetActive(true);
     }
