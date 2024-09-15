@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: Merman
-  _health: 10
+  _health: 20
   _damage: 1
   Speed: 2
   _distanceFromPlayer: 0.94

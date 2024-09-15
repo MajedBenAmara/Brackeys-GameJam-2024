@@ -25,11 +25,13 @@ public class CombatStageManager : MonoBehaviour
 
     public void CheckClearCondition()
     {
-        if(_totalEnemyNb == PlayerManager.instance.PlayerStats.KillScore)
+        if(_totalEnemyNb == PlayerManager.instance.PlayerStats.TotalScore)
         {
             Stagefinish.text = $"Reward: {PlayerManager.instance.PlayerStats.KillScore * 10} Gold";
             PlayerManager.instance.PlayerStats.Gold += PlayerManager.instance.PlayerStats.KillScore * 10;
+           
             StageIsClear = true; 
+            StageSelectionScreen.GetComponent<StageSelection>().currentnode.IsCompleted = true;
             ClearStageScreen.SetActive(true);
         }
     }
@@ -45,8 +47,8 @@ public class CombatStageManager : MonoBehaviour
         StageIsClear = false;
         PlayerManager.instance.PlayerStats.ResetKillScore();
         Time.timeScale = 1.0f;
-        ClearStageScreen.SetActive(false);
-        StageSelectionScreen.SetActive(true);
+        //ClearStageScreen.SetActive(false);
+        //StageSelectionScreen.SetActive(true);
 
     }
 }

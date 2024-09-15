@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
     public int Gold = 0;
     public int KillScore = 0;
     public int TotalScore = 0;
+    public float Resistance;
 
     public Slider HpSlider;
 
@@ -37,7 +38,7 @@ public class PlayerStats : MonoBehaviour
     {
         if(Time.time - _damageMoment >= TimeBetweenDamage)
         {
-            CurrentHealth -= damage;
+            CurrentHealth -= (damage - damage * (Resistance/10f));
             HpSlider.value = CurrentHealth / MaxHealth;
             GetComponent<FlashEffect>().NormalFlash();
             CheckHP();
@@ -122,7 +123,7 @@ public class PlayerStats : MonoBehaviour
         if (gold > Gold) return false;
 
         Gold -= gold;
-        TimeBetweenDamage += fr;
+        Resistance += fr;
         FindAnyObjectByType<AudioManager>().Play("Upgrade");
 
         return true;

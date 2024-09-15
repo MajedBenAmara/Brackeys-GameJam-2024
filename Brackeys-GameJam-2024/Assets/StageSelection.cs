@@ -5,9 +5,10 @@ using UnityEngine.UI;
 public class StageSelection : MonoBehaviour
 {
     public Node[] Stages;
+    public Node Default;
     [SerializeField] EnemyBtn EnemyBtn;
     [SerializeField] Text StageText;
-
+    public Node currentnode;
     [SerializeField] Text EnemyText;
 
 
@@ -16,13 +17,23 @@ public class StageSelection : MonoBehaviour
     {
         foreach (Node node in Stages) 
         {
+            
             Button button = node.gameObject.GetComponent<Button>();
             button.onClick.AddListener(() => CopyData(node));
+            
         }
+        CopyData(Default);
     }
 
     void CopyData(Node node)
     {
+        if (node.IsCompleted) 
+        {
+            node.GetComponent<Button>().enabled = false;
+            return;
+
+        }
+        currentnode = node;
         FindAnyObjectByType<AudioManager>().Play("StageSelect");
         EnemyText.text = null;
         StageText.text = null;
@@ -33,5 +44,6 @@ public class StageSelection : MonoBehaviour
         }
         EnemyBtn.EnemiesType = node.EnemiesType;
         EnemyBtn.EnemiesNumber = node.EnemiesNumber;
+        EnemyBtn.boss = node.Boss;
     }
 }
