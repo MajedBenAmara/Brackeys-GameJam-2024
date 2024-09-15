@@ -5,19 +5,8 @@ using UnityEngine.SceneManagement;
 public class PauseScreen : MonoBehaviour
 {
     static public bool Paused;
-    public static PauseScreen Instance { get; private set; }
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     private void Start()
     {
