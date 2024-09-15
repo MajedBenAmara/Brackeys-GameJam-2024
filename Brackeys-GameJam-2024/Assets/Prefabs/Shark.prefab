@@ -218,6 +218,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _normalFlashMaterial: {fileID: 2100000, guid: 3f711e56c98eaec468ace2744d116b19, type: 2}
-  FlashDuration: 0.5
+  FlashDuration: 0.2
   _spriteRenderer: {fileID: 820406666860530137}
   _originalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
