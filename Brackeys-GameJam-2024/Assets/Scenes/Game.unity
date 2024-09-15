@@ -1579,6 +1579,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_DisabledColor.r
       value: 0.2735849
       objectReference: {fileID: 0}
+    - target: {fileID: 859537439279538780, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a568673155dac8d4f82b49d6f65cb6aa, type: 3}
     - target: {fileID: 896295352167407938, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1815,6 +1819,14 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 52cd02f4052ad9e42b62cca168e26092, type: 3}
+    - target: {fileID: 3466572985588059752, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a568673155dac8d4f82b49d6f65cb6aa, type: 3}
+    - target: {fileID: 3582277858558286060, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a568673155dac8d4f82b49d6f65cb6aa, type: 3}
     - target: {fileID: 4451003122708934401, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
       propertyPath: m_Text
       value: 3
@@ -1907,6 +1919,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 52cd02f4052ad9e42b62cca168e26092, type: 3}
+    - target: {fileID: 5888611631821679777, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a568673155dac8d4f82b49d6f65cb6aa, type: 3}
     - target: {fileID: 6238911222136048738, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
       propertyPath: Name
       value: Stage 5
@@ -2055,6 +2071,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8095092418403735848, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a4d9c0d570fa5945a06c5631fb5569a, type: 3}
     - target: {fileID: 8362368886117356330, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2075,6 +2095,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_DisabledColor.r
       value: 0.2735849
       objectReference: {fileID: 0}
+    - target: {fileID: 8383788645435036371, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a568673155dac8d4f82b49d6f65cb6aa, type: 3}
     - target: {fileID: 8409208212298981742, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -2087,6 +2111,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 8971825384854821474, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5dc3fef409b165e4798c258cddec6046, type: 3}
+    - target: {fileID: 8980324388470034649, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5dc3fef409b165e4798c258cddec6046, type: 3}
     - target: {fileID: 9019146931354999481, guid: 65d131fb8d808ee4387e5de7f8d1fef8, type: 3}
       propertyPath: m_Colors.m_DisabledColor.a
       value: 0.5019608
@@ -2595,11 +2627,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
---- !u!212 &1677867476 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 711861185582650467, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
-  m_PrefabInstance: {fileID: 1677867475}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1709551983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5230824396450355902, guid: b3a3eb5fdcf08f34eb77cc0bb1107599, type: 3}
