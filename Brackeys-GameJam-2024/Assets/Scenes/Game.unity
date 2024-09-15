@@ -544,6 +544,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6996381069613616740, guid: f2995e8ad72df304abb519404785bd27, type: 3}
   m_PrefabInstance: {fileID: 1657903970}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &474088215 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 711861185582650467, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
+  m_PrefabInstance: {fileID: 1677867475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &474417463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,7 +2549,7 @@ PrefabInstance:
     - target: {fileID: 6950164136803921598, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
       propertyPath: _spriteRenderer
       value: 
-      objectReference: {fileID: 1677867476}
+      objectReference: {fileID: 474088215}
     - target: {fileID: 8162733916925420427, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
