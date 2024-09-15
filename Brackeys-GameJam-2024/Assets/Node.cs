@@ -6,18 +6,7 @@ public class Node : MonoBehaviour
     public string[] EnemiesType;
     public int[] EnemiesNumber;
 
-    [SerializeField] GameObject Next;
-
-    private void Start()
-    {
-        if (Next != null)
-        {
-            Debug.Log("Hello");
-        }
-    }
-
-
-
-
+    public bool IsLocked = true;
+    public bool IsCompleted = false;
 
 }
