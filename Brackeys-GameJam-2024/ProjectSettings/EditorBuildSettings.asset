@@ -6,15 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Game.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3a7ca1d982bcac74b8f2151a1b50832b
   - enabled: 1
-    path: Assets/Scenes/TanPi.unity
-    guid: 8285a5f6c8640454b980850aececf78e
-  - enabled: 1
-    path: Assets/Scenes/TanPiGame.unity
+    path: Assets/Scenes/Game.unity
     guid: 0be18e272a003ed4c8ac59f8fdc808af
   m_configObjects: {}
