@@ -2627,6 +2627,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
+--- !u!212 &1677867476 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 711861185582650467, guid: 37822192b9d36b84aa905d128dd80819, type: 3}
+  m_PrefabInstance: {fileID: 1677867475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1709551983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5230824396450355902, guid: b3a3eb5fdcf08f34eb77cc0bb1107599, type: 3}
